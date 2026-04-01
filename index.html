@@ -1,9 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="lt">
 <head>
-  <title>Mano svetaine</title>
+<meta charset="UTF-8">
+<title>Baltijo SMP</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #1e1e1e, #2c2c2c);
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 40px;
+    background: #111;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+img {
+    width: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.menu {
+    margin-top: 30px;
+}
+
+button {
+    padding: 15px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #00bcd4;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0097a7;
+}
+
+.box {
+    display: none;
+    margin: 30px auto;
+    padding: 20px;
+    width: 60%;
+    background: #333;
+    border-radius: 10px;
+}
+</style>
+
+<script>
+function showBox(id) {
+    let boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => box.style.display = 'none');
+
+    document.getElementById(id).style.display = 'block';
+}
+</script>
+
 </head>
+
 <body>
-  <h1>Sveikas atvykęs!</h1>
+
+<header>
+    <h1>Sveikas atvykęs į Baltijo SMP!</h1>
+    <p>Geriausias Minecraft serveris 🎮</p>
+    <img src="https://i.imgur.com/3ZQ3ZQn.png" alt="Minecraft">
+</header>
+
+<div class="menu">
+    <button onclick="showBox('discord')">Discord</button>
+    <button onclick="showBox('paslaugos')">Paslaugos</button>
+    <button onclick="showBox('admin')">Administracija</button>
+    <button onclick="showBox('taisykles')">Taisyklės</button>
+</div>
+
+<div id="discord" class="box">
+    <h2>Discord</h2>
+    <p>Prisijunk prie mūsų Discord: discord.gg/tavo-serveris</p>
+</div>
+
+<div id="paslaugos" class="box">
+    <h2>Paslaugos</h2>
+    <p>VIP, MVP ir kitos privilegijos jau greitai!</p>
+</div>
+
+<div id="admin" class="box">
+    <h2>Administracija</h2>
+    <p>Savininkas: Tu 😎<br>Adminai: Draugai</p>
+</div>
+
+<div id="taisykles" class="box">
+    <h2>Taisyklės</h2>
+    <p>1. Necheatinti<br>2. Gerbti kitus<br>3. Nesikeikti</p>
+</div>
+
 </body>
 </html>
